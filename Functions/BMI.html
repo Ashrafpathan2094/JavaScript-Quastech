@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI</title>
+    </head>
+
+    <body>
+
+        <h1>Calculating the Body Mass Index</h1>
+
+        <form action="">
+            <input type="button" value="Calculate BMI"
+                onclick="bmiCalculator(bmi)">
+        </form>
+
+        <br>
+        <div id="ans"></div>
+
+        <script>
+
+        var weight = prompt("Enter Your Weight in Kgs: ");
+        var height = prompt("Enter Your Height in Meters : ");
+
+
+        var bmi = weight / (height * height);
+        function bmiCalculator(bmi) {
+
+            if (bmi < 18.5) {
+
+                document.getElementById("ans").innerHTML = "Your Body Mass Index is " + bmi + " You're UnderWeight. Please Increase calories in your diet"; 
+            }else if( (bmi >=18.5) && (bmi <=24.9)){
+                document.getElementById("ans").innerHTML = "Your Body Mass Index is " + bmi + " You're NormalWeight.Maintain your same diet"; 
+            }else if ((bmi >=25)&& (bmi <=29.9)){
+                document.getElementById("ans").innerHTML = "Your Body Mass Index is " + bmi + " You're OverWeight.Keep your meal calorie deficiet"; 
+            }else{
+                document.getElementById("ans").innerHTML = "Your Body Mass Index is " + bmi + " You're Obese.Please consult a nutrionist"; 
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+    </script>
+    </body>
+
+</html>
