@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypotenuse</title>
+</head>
+<body>
+    <p>Click this Below button to Calculate the Hypotenuse.</p>
+
+    <form action="">
+
+        <input type="button" value="Call Function" onclick="secondFunction()">
+
+    </form>
+
+    <br>
+    <div id="ans">
+
+    </div>
+
+
+    <script>
+
+        
+        var a =prompt("Enter your first number :");
+        var b =prompt("Enter your second number :");
+
+        function hypotenuse(a,b){
+
+            function square(x){
+                return x*x;
+            }
+            return Math.sqrt(square(a) + square(b));
+        }
+
+        function secondFunction(){
+
+            var result = hypotenuse(a,b);
+            
+            document.getElementById("ans").innerHTML = result;
+        }
+
+
+    </script>
+    
+</body>
+</html>
