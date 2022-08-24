@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallindrome</title>
+</head>
+<body>
+    
+    <script>
+
+         var rem , temp , result= "1" ;
+         asda= parseInt(result);
+
+         var num = 1;
+         document.write(typeof(asda));
+
+        
+        var number = prompt("Enter a number :");
+
+        temp = number;
+
+        while(number>0){
+
+            rem = number %10; 
+            number = parseInt(number/10); 
+            result = result *10 + rem; 
+        }
+
+        if (result == temp)
+
+            window.alert(" This number is a Pallindrome");
+        else
+            window.alert(" This number is not a Pallindrome");
+        
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
