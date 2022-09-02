@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Fname and Lname</title>
+</head>
+<body>
+
+    <form name="inputform" id="form1" action="" method="get">
+        First Name: <input type="text" id="fname"><br><br><br>
+        Last Name: <input type="text" id="lname"><br><br><br>
+        <input type="button" value="Get Value" onclick="getNames()">
+     </form>
+
+     <script>
+        function getNames(){
+            fname=document.getElementById("fname").value;
+            lname=document.getElementById("lname").value;
+            alert(fname+ " " +lname);
+
+
+        }
+
+     </script>
+    
+</body>
+</html>

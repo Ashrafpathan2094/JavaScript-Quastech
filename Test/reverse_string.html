@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+</head>
+<body>
+
+    <script>
+
+        let userInput = prompt("Enter a string to reverse");
+        let len = userInput.length-1;
+        let rev=""
+
+        for(i=len;i>=0;i--){
+
+            rev = rev + userInput[i];
+        }
+
+        if (rev== userInput){
+            document.write("The given string when reversed is equal");
+        }else{
+            document.write("The given string when reversed is not equal");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

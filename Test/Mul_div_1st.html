@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multiplication Divisions problem</title>
+        <style>
+        .container {
+
+            border: 2px solid grey;
+
+            width: 50%;
+
+            height: 500px;
+            padding: 50px;
+        }
+
+    </style>
+    </head>
+    <body>
+        <script>
+            number1=document.getElementById("num1").value;
+            number2=document.getElementById("num2").value;
+            intNumber1 = parseFloat(number1);
+            intNumber2 = parseFloat(number2);
+            multiply = intNumber1 *intNumber2;
+            divide = num1 /num2;
+
+            
+
+
+        </script>
+        <div class="container">
+
+            <form action="" name="form">
+
+                <b>
+                    1st Number : <input type="text" id="num1"> <br><br>
+                    2nd Number : <input type="text" id="num2"><br><br>
+                </b>
+                <input type="button" value="Multiply" onclick="document.write(multiply);">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button>Divide</button>
+
+            </form>
+
+            <p>The Answer is</p>
+            <p id="ans"></p>
+        </div>
+
+
+    </body>
+</html>
