@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inheritance Program 1</title>
+    </head>
+    <body>
+        <h1>Inheritance Program 1</h1>
+        <div id="demo"></div>
+        <script>
+
+            class Phone{
+                constructor(brand){
+                    this.brand =brand;
+                }
+                present(){
+                    return "The Brand Name Of this phone is " + this.brand;
+                }   
+            }
+
+
+
+            class Model extends Phone{
+                constructor(brand,model){
+                    super(brand);
+                    this.model = model;
+                }
+
+                show(){
+                    return this.present() + ". The Model of this phone is " + this.model;
+                }
+                   
+            }
+
+            Model.prototype.showOnlyModel = function(){
+                document.write(this.model);
+            };
+
+
+            let myPhone = new Model("Iphone","13 Pro");
+            let myPhone1 = new Model("Samsooong","Galaxy");
+            let realme = new Model("Realme","6");
+            let redmi = new Model("Redmi","Note 6");
+            document.getElementById("demo").innerHTML = myPhone1.show();
+            redmi.showOnlyModel();
+
+        
+        </script>
+
+    </body>
+</html>

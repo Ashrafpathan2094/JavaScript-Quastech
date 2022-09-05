@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Class</title>
+</head>
+<body>
+
+    <script>
+        function Animal(legs){
+            this.legs = legs;
+        }
+
+        Animal.prototype.walk = function(){
+            console.log("Walking on " + this.legs + "legs");
+        }
+        function Bird(legs){
+            Animal.call(this.legs);
+        }
+        Bird.prototype = Object.create(Animal.prototype);
+        Bird.prototype.constructor = Animal;
+
+        Bird.prototype.fly= function(){
+            console.log("Flying");
+        }
+
+        var pigeon = new Bird(2);
+        pigeon.walk();
+        pigeon.fly();
+
+
+    </script>
+    
+</body>
+</html>
