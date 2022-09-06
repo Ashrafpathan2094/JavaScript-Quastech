@@ -22,15 +22,14 @@
             console.log(this.income);
         }
 
-
         totalExpenses(){
             console.log(this.expenses);
         }
 
-
         accountInfo(){
             document.write("Name : " + this.firstname+ " " + this.lastname + "<br>" + "Your Income is " + this.income + "<br>" + "Your Expense are " + this.expenses + "<br>");
         }
+
 
         addIncome(income){
             this.income += income;
@@ -43,9 +42,12 @@
 
 
         let ashraf = new PersonAccount("Ashraf","Khan", 30000,25000);
+        let sahil = new PersonAccount("sahil","kanojiya", 33000,225000);
         ashraf.accountInfo();
         ashraf.addIncome(5000);
-        ashraf.accountInfo();
+        sahil.accountInfo();
+        sahil.addIncome(5000);
+        sahil.accountInfo();
         ashraf.addExpense(3000);
         ashraf.accountInfo();
 
