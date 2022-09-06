@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<body>
+
+    <script>
+
+
+
+        class Quastech{
+            constructor(trainer){
+                this.trainer = trainer;
+                }
+            sayName(){
+                console.log(`Hiii My Name is ${this.trainer}`);
+                }
+            }
+
+
+        class Trainer extends Quastech{
+            sayName(){
+                console.log(`Hiii My Name is ${this.trainer}. I Am a Trainer.`);
+                }
+            }
+
+        class Hr extends Quastech{
+            sayName(){
+                console.log(`Hiii My Name is ${this.trainer}. I Am in HR Department.`);
+                }  
+            }
+
+        class Developer extends Quastech{
+            sayName(){
+                console.log(`Hiii My Name is ${this.trainer}. I Am a Developer.`);
+                }
+            }
+
+        class TechSupport extends Quastech{
+            sayName(){
+                console.log(`Hiii My Name is ${this.trainer}. I Am in TechSupport.`);
+                }
+            }
+
+
+        let v1 = new Quastech("Ashraf");
+        let v2 = new Trainer("Ashraf Khan");
+        let v3 = new Hr("StarK");
+        let v4 = new Developer("Vikas");
+        let v5 = new TechSupport("Kaushal");
+
+
+
+        v1.sayName();
+
+
+        v2.sayName();
+
+
+        v3.sayName();
+
+
+        v4.sayName();
+
+
+        v5.sayName();
+
+
+    </script>
+    
+</body>
+</html>

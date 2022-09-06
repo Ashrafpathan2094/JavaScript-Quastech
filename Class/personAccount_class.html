@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Person Class Pratice</title>
+    </head>
+    <body>
+
+        <script>
+        class PersonAccount{
+            constructor(firstname,lastname,income,expenses){
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.income = income;
+                this.expenses = expenses;
+            }
+
+
+        totalIncome(){
+            console.log(this.income);
+        }
+
+
+        totalExpenses(){
+            console.log(this.expenses);
+        }
+
+
+        accountInfo(){
+            document.write("Name : " + this.firstname+ " " + this.lastname + "<br>" + "Your Income is " + this.income + "<br>" + "Your Expense are " + this.expenses + "<br>");
+        }
+
+        addIncome(income){
+            this.income += income;
+        }
+
+        addExpense(expenses){
+            this.expenses += expenses;
+        }
+        }
+
+
+        let ashraf = new PersonAccount("Ashraf","Khan", 30000,25000);
+        ashraf.accountInfo();
+        ashraf.addIncome(5000);
+        ashraf.accountInfo();
+        ashraf.addExpense(3000);
+        ashraf.accountInfo();
+
+
+    </script>
+    </body>
+</html>

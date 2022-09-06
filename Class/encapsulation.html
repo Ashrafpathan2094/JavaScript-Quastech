@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encapsulation</title>
+    </head>
+    <body>
+
+        <script>
+
+        class Student{
+            constructor(){
+                var id;
+                var name;
+                var marks;
+                }
+
+            getId(){
+                return this.id
+                }
+
+            setId(id){
+
+                this.id =id;
+                }
+
+            getName(){
+                return this.name
+                }
+
+            setName(name){
+                this.name=name;
+                }
+
+            getMarks(){
+                return this.marks
+                }
+
+            setMarks(marks){
+                this.marks=marks;
+                }
+            }
+
+
+        let emp = new Student();
+        emp.setId(1);
+        emp.setName("Ashraf");
+        emp.setMarks(9);
+        document.write("Name of Student is "+emp.getName() + "Marks of the Students are "+ emp.getMarks() + " Id of the student is" + emp.getId() + "<br>");
+
+        let emp1 = new Student();
+        emp1.setName("StarK")
+        document.write("Name of Student is "+emp1.getName() + "Marks of the Students are "+ emp1.getMarks() + " Id of the student is" + emp1.getId());
+
+    </script>
+    </body>
+</html>

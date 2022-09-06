@@ -16,9 +16,11 @@
         Animal.prototype.walk = function(){
             console.log("Walking on " + this.legs + "legs");
         }
+
         function Bird(legs){
             Animal.call(this.legs);
         }
+
         Bird.prototype = Object.create(Animal.prototype);
         Bird.prototype.constructor = Animal;
 
