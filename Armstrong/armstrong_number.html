@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armstrong</title>
-</head>
-<body>
-    
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Armstrong</title>
+    </head>
+    <body>
+
+        <script>
 
         var rem , temp , result= 0;
-
-
-        
         var number = prompt("Enter a number :");
-
         temp = number;
-
         while(number>0){
-
-            rem = number %10; 
+            rem = number %10;   
             number = parseInt(number/10); 
             result = result + (rem*rem*rem); 
         }
-
-        if (result == temp)
+        if (result == temp){
 
             window.alert(" This number is ArmStrong Number ");
-        else
-            window.alert(" This number is not a Armstrong Number");
+        }
+            else{
+
+                window.alert(" This number is not a Armstrong Number");
+            }
         
 
 
 
 
     </script>
-
-
-
-</body>
+    </body>
 </html>

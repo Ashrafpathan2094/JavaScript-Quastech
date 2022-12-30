@@ -8,15 +8,20 @@
 </head>
 <body>
 
-    <h2> This is a "JavaScript" Program</h2>
-
-        <p id="demo">If you click the below button the content of this para will change</p><br>
-
-        <button type="button" onclick='document.getElementById("demo").innerHTML= "Hey this a change text on button click!"'>Click Me!</button>
 
 
-   
-    
+    <script>
+        for(let i=0;i<=5;i++){
+            for(let j=5;j>=i;j--){
+                document.write("&nbsp;");
+            }
+
+            for(let k=0;k<=i;k++){
+                document.write("*");
+            }
+            document.write( "<br/>");
+        }
+    </script>
 
     
 </body>
