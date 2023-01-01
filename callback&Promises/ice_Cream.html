@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IceCream</title>
+    </head>
+
+    <body>
+        <script>
+        let stocks = {
+            Fruits: ["strawberry", "grapes", "banana", "apple"],
+            liquid: ["water", "ice"],
+            holder: ["cone", "cup", "stick"],
+            toppings: ["chocolate", "peanuts"],
+        };
+        /* 
+                 let order = (Fruit_name,call_production) => {
+        
+                    setTimeout(() => {
+                    console.log(`${stocks.Fruits[Fruit_name]} was selected.`)
+                    call_production();       
+                        },2000)
+                  };
+        
+                  let production = () => {
+                    setTimeout(() => {
+        
+                        console.log("Production was selected.");
+        
+                        setTimeout(() => {
+                            console.log("The Fruit has been Chopped");
+        
+                            setTimeout(() => {
+                                console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} has been added`);
+        
+                                setTimeout(() => {
+                                    console.log(`The Machine was started`);
+        
+                                    setTimeout(() => {
+                                        console.log(`IceCream was placed on the ${stocks.holder[0]}`);
+        
+        
+                                        setTimeout(() => {
+                                            console.log(`${stocks.toppings[0]} toppings was added`);
+        
+        
+                                            setTimeout(() => {
+                                                console.log(`Your IceCream has been served.`);
+                                            },2000)
+        
+                                        },3000)
+        
+                                    },1000)
+        
+                                },1000)
+        
+                            },1000)
+        
+                        },2000)
+                        
+                    },0000)
+                  };
+        
+                  order(1,production); */
+
+
+        let is_shop_open = false;
+
+        let order = (time, work) => {
+
+            return new Promise(function (resolve, reject) {
+                if (is_shop_open) {
+
+                    return setTimeout(() => {
+                        resolve(work())
+                    }, time)
+
+                } else {
+                    return reject(console.log("Sorry We are Currently Close now."))
+                }
+            })
+        }
+
+
+        order(2000, () => console.log(`${stocks.Fruits[0]} fruit was selected`))
+
+            .then(() => {
+                return order(0000, () => console.log(`Production has Started!`))
+            })
+
+            .then(() => {
+                return order(2000, () => console.log(`Fruit was chopped.`))
+            })
+
+            .then(() => {
+                return order(1000, () => console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} was selected.`))
+            })
+
+            .then(() => {
+                return order(1000, () => console.log(`Machine was started`))
+            })
+
+            .then(() => {
+                return order(2000,() => console.log(`IceCream was placed on ${stocks.holder[0]}`))
+            })
+
+            .then(() => {
+                return order(3000,() => console.log(` ${stocks.toppings[0]} was selected as toppings`))
+            })
+
+            
+            .then(() => {
+                return order(1000,() => console.log(`IceCream was Served!`))
+            })
+
+            .catch(() => {
+                console.log("Customer left.")
+            })
+
+            .finally(() => {
+                console.log("Day Ended.")
+            })
+
+
+    </script>
+    </body>
+
+</html>
